@@ -61,6 +61,18 @@ for i in range(Nx):
 
 # Resolver
 A = A.tocsr()
+
+# ======================================
+# GERAR IMAGEM DA ESTRUTURA ESPARSA DA MATRIZ
+# ======================================
+plt.figure(figsize=(10, 10))
+plt.spy(A, markersize=0.05)
+plt.title("Estrutura Esparsa da Matriz A (h = 0.05)", fontsize=12)
+plt.xlabel("Índice da coluna", fontsize=10)
+plt.ylabel("Índice da linha", fontsize=10)
+plt.savefig('matriz_esparsa.png', dpi=300, bbox_inches='tight')
+plt.close()
+
 u_flat = spsolve(A, b)
 u_num = u_flat.reshape((Nx, Ny))
 
