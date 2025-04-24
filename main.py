@@ -62,9 +62,7 @@ for i in range(Nx):
 # Resolver
 A = A.tocsr()
 
-# ======================================
-# GERAR IMAGEM DA ESTRUTURA ESPARSA DA MATRIZ
-# ======================================
+# Gerar imagem da estrutura esparsa da matriz
 plt.figure(figsize=(10, 10))
 plt.spy(A, markersize=0.05)
 plt.title("Estrutura Esparsa da Matriz A (h = 0.05)", fontsize=12)
